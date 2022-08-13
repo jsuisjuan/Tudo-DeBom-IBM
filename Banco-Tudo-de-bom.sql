@@ -1,6 +1,6 @@
-create database tudodebom;
+create database tudodebom2;
 
-use tudodebom;
+use tudodebom2;
 
 create table cliente(
 id int auto_increment primary key,
@@ -47,7 +47,7 @@ foreign key(pedido_id) references pedido(id),
 foreign key(produto_id) references produto(id)
 );
 
- insert into cliente (nome, cpf) values ("nome1", "123.123.123-123"), ("nome2", "123.123.123-123"), ("nome3", "123.123.123-123"), ("nome4", "123.123.123-123");
+insert into cliente (nome, cpf) values ("nome1", "123.123.123-123"), ("nome2", "123.123.123-123"), ("nome3", "123.123.123-123"), ("nome4", "123.123.123-123");
  
 insert into categoria(nome) values ("tipo 1"), ("tipo 2"), ("tipo 3"), ("tipo 4");
  
