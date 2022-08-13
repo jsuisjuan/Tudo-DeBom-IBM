@@ -38,16 +38,18 @@ public class ConnectionBancoDeDados {
 
 	}
 	
-	public void deletarCliente(int id) {
+	public void atualizarCliente(String nome, int id) {
 		try {
-			String query = "DELETE FROM cliente WHERE id = '" + id + "' ;";
+
+			String query = "UPDATE cliente SET nome = '" + nome + "' WHERE id = '" + id + "';";
 			System.out.println(query);
 			this.statement.execute(query);
-			System.out.println("Cliente deletado");
 		} catch (Exception e) {
-			System.out.println("Erro ao deletar o id = " + id + e.getMessage());
+			System.out.println("Erro: " + e.getMessage());
 		}
 	}
+	
+	
 	
 	
 
